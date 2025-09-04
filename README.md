@@ -40,6 +40,23 @@ Device Selection & Debug
 - Force channel count (try 2 or 1): `python cava_win.py --channels 2`
 - Force backend: `--backend sd` (sounddevice) or `--backend sc` (soundcard)
 
+Themes & Visual Options
+- Choose theme: `--theme sunset|ocean|rainbow|mono` (default: `sunset`)
+- Peak indicator: `--cap dot|line|none` (default: `dot`)
+- Disable 24-bit color (use 256-color): `--no-truecolor`
+
+Examples
+```bash
+# Ocean theme with line peaks
+python cava_win.py --theme ocean --cap line
+
+# Rainbow theme in 256-color mode
+python cava_win.py --theme rainbow --no-truecolor
+
+# Minimal mono theme
+python cava_win.py --theme mono --cap none
+```
+
 If you still get a channel error, try combining flags, e.g.:
 ```bash
 python cava_win.py --device "speakers" --samplerate 44100 --debug
